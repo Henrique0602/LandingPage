@@ -47,7 +47,7 @@ const body = document.body
         cards();
     
 
-        const Habilidades = () => {
+        const habilidades = () => {
             let div = document.createElement("div");
             div.setAttribute('class', 'habilidades');
             
@@ -64,15 +64,15 @@ const body = document.body
             window.sr = ScrollReveal({ reset: true });
             sr.reveal('.banner h1', { duration: 4000 });
         }
-        Habilidades();
+        habilidades();
 
 
-        const HabilidadesHenrique = () => {
+        const habilidadesHenrique = () => {
             let div = document.createElement("div");
             div.setAttribute('class', 'habilidadesHenrique');
             
             var textoBanner = document.createElement("h1");
-            textoBanner.innerText = 'Henrique, 17 anos, estuda na FIAP desde 2022. Suas principais habilidades na área escolar é : Front-end. Fora da escola é o futebol, jogos online, musculação';
+            textoBanner.innerText = 'Henrique, 17 anos, estuda na FIAP desde 2022. Suas principais habilidades na área escolar é : Front-end. Fora da escola é o futebol, jogos online e musculação';
         
             div.appendChild(textoBanner);
             body.append(div);
@@ -85,53 +85,49 @@ const body = document.body
             window.sr = ScrollReveal({ reset: true });
             sr.reveal('.banner h1', { duration: 4000 });
         }
-        HabilidadesHenrique();
-    
-    
-        const HabilidadesEric = () => {
-            let div = document.createElement("div");
-            div.setAttribute('class', 'habilidadesEric');
-    
-            var textoBanner = document.createElement("h1");
-            textoBanner.innerText = 'Eric, 17 anos, estuda na FIAP desde 2020. Suas principais habilidades na área escolar é : Front-end e Back-end. Fora da escola so atleta de boxe e pratico musculação';
-        
-            div.appendChild(textoBanner);
-            body.append(div);
-        
-            div.style.display = 'flex';
-            div.style.alignItems = 'center';
-            div.style.justifyContent = 'flex-end';
-            div.style.padding='20px'
-        
-            window.sr = ScrollReveal({ reset: true });
-            sr.reveal('.banner h1', { duration: 4000 });
-        }
-        HabilidadesEric();
-    
-    
-        
-        const HabilidadesDaniel = () => {
-            let div = document.createElement("div");
-            div.setAttribute('class', 'habilidadesDaniel');
-    
-            var textoBanner = document.createElement("h1");
-            textoBanner.innerText = 'Daniel, 18 anos, estuda na FIAP desde 2023. Suas principais habilidades na área escolar é : Front-end/Desing. Fora da escola é o futebol, jogos online, xadrez e musculação';
-        
-            div.appendChild(textoBanner);
-            body.append(div);
-        
-            div.style.display = 'flex';
-            div.style.justifyContent = 'flex-start';
-            div.style.padding='15px'
-        
-            window.sr = ScrollReveal({ reset: true });
-            sr.reveal('.banner h1', { duration: 4000 });
-        }
-        HabilidadesDaniel();
+        habilidadesHenrique();
 
-
-        
-        const Footer = () => {
+        const habilidadesDaniel = () => {
+          let div = document.createElement("div");
+          div.setAttribute('class', 'habilidadesDaniel');
+  
+          var textoBanner = document.createElement("h1");
+          textoBanner.innerText = 'Daniel, 17 anos, estuda na FIAP desde 2023. Suas principais habilidades na área escolar é : Front-end/Desing. Fora da escola é o futebol, jogos online, xadrez e musculação';
+      
+          div.appendChild(textoBanner);
+          body.append(div);
+      
+          div.style.display = 'flex';
+          div.style.justifyContent = 'flex-start';
+          div.style.padding='15px'
+      
+          window.sr = ScrollReveal({ reset: true });
+          sr.reveal('.banner h1', { duration: 4000 });
+      }
+      habilidadesDaniel();
+    
+    
+        const habilidadesEric = () => {
+          let div = document.createElement("div");
+          div.setAttribute('class', 'habilidadesHenrique');
+          
+          var textoBanner = document.createElement("h1");
+          textoBanner.innerText = 'Eric, 17 anos, estuda na FIAP desde 2020. Suas principais habilidades na área escolar é : Front-end e Back-end. Fora da escola so atleta de boxe e pratico musculação';
+      
+          div.appendChild(textoBanner);
+          body.append(div);
+      
+          div.style.display = 'flex';
+          div.style.alignItems = 'center';
+          div.style.justifyContent = 'flex-start';
+          div.style.padding='15px'
+      
+          window.sr = ScrollReveal({ reset: true });
+          sr.reveal('.banner h1', { duration: 4000 });
+      }
+      habilidadesEric();
+    
+        const form = () => {
           
           const div = document.createElement("div");
           div.setAttribute('class', 'contato');
@@ -256,4 +252,27 @@ const body = document.body
         }
         
         
-        Footer();
+        form();
+
+
+        function footer() {
+          let footer = document.createElement("footer");
+          footer.setAttribute("class", "footer");
+      
+          let container = document.createElement("div");
+          container.setAttribute("class", "container");
+      
+          let footerText = document.createElement("p");
+          footerText.setAttribute("class", "footer-text");
+          footerText.textContent = "Footer:";
+      
+          let copyrightText = document.createElement("p");
+          copyrightText.setAttribute("class", "copyright");
+          copyrightText.innerHTML = "&copy; 2024 Daniel, Eric e Henrique. Todos os direitos não reservados.";
+  
+          container.appendChild(footerText);
+          container.appendChild(copyrightText);
+          footer.appendChild(container);
+          document.body.appendChild(footer);
+      }
+      footer();
